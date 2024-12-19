@@ -1,99 +1,196 @@
-<!--portfolio start -->
-<section id="portfolio" class="portfolio">
-    <div class="portfolio-details">
-        <div class="section-heading text-center">
-            <h2>portfolio</h2>
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <!-- meta data -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- title of site -->
+    <title>Reetik Sharma Portfolio</title>
+
+    <!-- For favicon png -->
+    <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
+
+    <!-- Fonts and Icons -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+</head>
+
+<body>
+    <!-- Header Start -->
+    <header class="top-area">
+        <div class="header-area">
+            <nav class="navbar navbar-default bootsnav navbar-fixed">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <a class="navbar-brand" href="#">Reetik Sharma</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="navbar-menu">
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="#about">About Me</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#achievements">Achievements</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- About Section Start -->
+    <section id="about" class="about">
         <div class="container">
-            <div class="portfolio-content">
-                <div class="isotope">
-                    <div class="row">
-                        <!-- Project 1: eMaps -->
-                        <div class="col-sm-4">
-                            <div class="item">
-                                <img src="assets/images/portfolio/emaps.jpg" alt="eMaps Project">
-                                <div class="isotope-overlay">
-                                    <a href="#">
-                                        eMaps - ERP for Accounting & Inventory
-                                    </a>
-                                    <p>Developed a comprehensive ERP application optimizing financial workflows and supply chain efficiency.</p>
-                                </div>
-                            </div>
-                        </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h2>About Me</h2>
+                    <p>Dynamic and result-driven Software Engineer with over 3.5 years of experience in developing high-performance, robust software solutions. Expertise in Java, backend system development, and API integrations.</p>
+                    <ul>
+                        <li>Improved system performance by 30% through optimized algorithms.</li>
+                        <li>Developed ERP solutions used across 5+ states.</li>
+                        <li>Proven track record of delivering secure and scalable systems.</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <img src="assets/images/about/profile_image.jpg" alt="Reetik Sharma" class="img-responsive">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About Section End -->
 
-                        <!-- Project 2: CobaSys -->
-                        <div class="col-sm-4">
-                            <div class="item">
-                                <img src="assets/images/portfolio/cobasys.jpg" alt="CobaSys Project">
-                                <div class="isotope-overlay">
-                                    <a href="#">
-                                        CobaSys - Budget & Fund Management ERP
-                                    </a>
-                                    <p>Implemented robust financial modules, automating budgeting workflows by 50%.</p>
-                                </div>
-                            </div>
+    <!-- Portfolio Section Start -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <div class="section-heading text-center">
+                <h2>Portfolio</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="portfolio-item">
+                        <img src="assets/images/portfolio/emaps.jpg" alt="eMaps Project" class="img-responsive">
+                        <div class="portfolio-overlay">
+                            <h3>eMaps</h3>
+                            <p>Developed an ERP application to optimize accounting and inventory management, automating workflows and improving efficiency by 30%.</p>
                         </div>
+                    </div>
+                </div>
 
-                        <!-- Project 3: BancMate -->
-                        <div class="col-sm-4">
-                            <div class="item">
-                                <img src="assets/images/portfolio/bancmate.jpg" alt="BancMate Project">
-                                <div class="isotope-overlay">
-                                    <a href="#">
-                                        BancMate - Financial Tech Infrastructure
-                                    </a>
-                                    <p>Delivered scalable solutions for financial institutions, enhancing customer banking services.</p>
-                                </div>
-                            </div>
+                <div class="col-md-4">
+                    <div class="portfolio-item">
+                        <img src="assets/images/portfolio/cobasys.jpg" alt="CobaSys Project" class="img-responsive">
+                        <div class="portfolio-overlay">
+                            <h3>CobaSys</h3>
+                            <p>Implemented ERP for Budget and Fund Management, automating budgeting workflows by 50% and enhancing financial transparency.</p>
                         </div>
+                    </div>
+                </div>
 
-                        <!-- Project 4: CBS -->
-                        <div class="col-sm-4">
-                            <div class="item">
-                                <img src="assets/images/portfolio/cbs.jpg" alt="CBS Project">
-                                <div class="isotope-overlay">
-                                    <a href="#">
-                                        CBS - Banking Automation
-                                    </a>
-                                    <p>Streamlined services like CASA, deposits, and trade finance for consistent multi-branch operations.</p>
-                                </div>
-                            </div>
+                <div class="col-md-4">
+                    <div class="portfolio-item">
+                        <img src="assets/images/portfolio/bancmate.jpg" alt="BancMate Project" class="img-responsive">
+                        <div class="portfolio-overlay">
+                            <h3>BancMate</h3>
+                            <p>Developed scalable financial tech infrastructure, enhancing banking services and operational efficiency.</p>
                         </div>
+                    </div>
+                </div>
+            </div>
 
-                        <!-- Project 5: CSS-SNA -->
-                        <div class="col-sm-4">
-                            <div class="item">
-                                <img src="assets/images/portfolio/css-sna.jpg" alt="CSS-SNA Project">
-                                <div class="isotope-overlay">
-                                    <a href="#">
-                                        CSS-SNA - Centralized Sponsored Scheme
-                                    </a>
-                                    <p>Integrated with PFMS for direct benefit transfers, ensuring seamless government scheme operations.</p>
-                                </div>
-                            </div>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="portfolio-item">
+                        <img src="assets/images/portfolio/cbs.jpg" alt="CBS Project" class="img-responsive">
+                        <div class="portfolio-overlay">
+                            <h3>CBS</h3>
+                            <p>Streamlined banking services like CASA and trade finance, improving service consistency across branches.</p>
                         </div>
+                    </div>
+                </div>
 
-                        <!-- Achievements Section -->
-                        <div class="col-sm-4">
-                            <div class="item">
-                                <img src="assets/images/portfolio/achievements.jpg" alt="Achievements">
-                                <div class="isotope-overlay">
-                                    <a href="#">
-                                        Achievements
-                                    </a>
-                                    <ul>
-                                        <li>Reduced system downtime by 25% using Spring Boot error-handling mechanisms.</li>
-                                        <li>Optimized deployment processes with AWS and GCP, reducing operational costs by 20%.</li>
-                                        <li>Ranked 3945 worldwide in Google Hash Code 2020.</li>
-                                        <li>Won Hackathon organized by Chandigarh Police in 2019.</li>
-                                    </ul>
-                                </div>
-                            </div>
+                <div class="col-md-4">
+                    <div class="portfolio-item">
+                        <img src="assets/images/portfolio/css-sna.jpg" alt="CSS-SNA Project" class="img-responsive">
+                        <div class="portfolio-overlay">
+                            <h3>CSS-SNA</h3>
+                            <p>Implemented centralized sponsored schemes under PFMS, ensuring secure and seamless government scheme operations.</p>
                         </div>
-                    </div><!-- /.row -->
-                </div><!--/.isotope-->
-            </div><!--/.portfolio-content-->
-        </div><!--/.container-->
-    </div><!--/.portfolio-details-->
-</section><!--/.portfolio-->
-<!--portfolio end -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Portfolio Section End -->
+
+    <!-- Achievements Section Start -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <div class="section-heading text-center">
+                <h2>Achievements</h2>
+            </div>
+            <ul>
+                <li>Ranked 3945 worldwide in Google Hash Code 2020.</li>
+                <li>Won Hackathon organized by Chandigarh Police in 2019.</li>
+                <li>Reduced system downtime by 25% using robust error-handling mechanisms.</li>
+                <li>Improved deployment throughput by 40% with AWS and GCP optimizations.</li>
+            </ul>
+        </div>
+    </section>
+    <!-- Achievements Section End -->
+
+    <!-- Contact Section Start -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-heading text-center">
+                <h2>Contact Me</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Contact Details</h3>
+                    <p><strong>Email:</strong> sharmars.reetik@gmail.com</p>
+                    <p><strong>Phone:</strong> +91-7814910935</p>
+                    <p><strong>LinkedIn:</strong> <a href="https://linkedin.com/in/reetik-sharma">linkedin.com/in/reetik-sharma</a></p>
+                </div>
+                <div class="col-md-6">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="4" placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Contact Section End -->
+
+    <!-- Footer Start -->
+    <footer class="text-center">
+        <p>&copy; 2024 Reetik Sharma. All Rights Reserved.</p>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- JavaScript Files -->
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+</body>
+
+</html>
