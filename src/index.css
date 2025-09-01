@@ -1,0 +1,421 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Dark theme as default */
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 142 76% 36%;
+    --primary-foreground: 355 7% 97%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 142 86% 28%;
+    --accent-foreground: 355 7% 97%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 142 76% 36%;
+
+    --radius: 0.75rem;
+
+    /* Enhanced Developer Design System */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-code: linear-gradient(90deg, #00FF41, #2DD4BF, #3B82F6, #8B5CF6);
+    --gradient-matrix: linear-gradient(180deg, #00FF41, #008F11);
+    --gradient-neural: conic-gradient(from 0deg, #00FF41, #2DD4BF, #3B82F6, #8B5CF6, #EC4899, #F59E0B);
+    --gradient-cyber: linear-gradient(45deg, #0F172A, #1E293B, #334155);
+    --gradient-hero: radial-gradient(ellipse at center, hsl(var(--primary)/0.2), transparent 70%);
+    
+    --shadow-neon: 0 0 20px #00FF41, 0 0 40px #00FF41, 0 0 60px #00FF41;
+    --shadow-cyber: 0 0 30px hsl(var(--primary)), 0 0 60px hsl(var(--primary));
+    --shadow-elegant: 0 10px 30px -10px hsl(var(--primary) / 0.5);
+    --shadow-glow: 0 0 40px hsl(var(--primary) / 0.6);
+    
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-elastic: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    --transition-cyber: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 142 76% 36%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 142 76% 36%;
+  }
+
+  .dark {
+    /* Optional light mode override */
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 142 76% 36%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 142 86% 28%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 142 76% 36%;
+    
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 142 76% 36%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 142 76% 36%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Animation utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+  
+  .animate-slide-in-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+  }
+  
+  .animate-slide-in-right {
+    animation: slideInRight 0.8s ease-out forwards;
+  }
+  
+  .animate-bounce-in {
+    animation: bounceIn 1s ease-out forwards;
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.5s ease-out forwards;
+  }
+  
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  
+  .animate-gradient {
+    animation: gradientShift 8s ease infinite;
+    background-size: 200% 200%;
+  }
+  
+  /* Developer-focused animations */
+  .animate-code-type {
+    animation: codeType 2s steps(40, end) infinite;
+  }
+  
+  .animate-matrix {
+    animation: matrixRain 3s linear infinite;
+  }
+  
+  .animate-neural {
+    animation: neuralPulse 4s ease-in-out infinite;
+    background: var(--gradient-neural);
+    background-size: 200% 200%;
+  }
+  
+  .animate-data-flow {
+    animation: dataFlow 3s linear infinite;
+  }
+  
+  .animate-circuit {
+    animation: circuitPulse 2s ease-in-out infinite;
+  }
+  
+  .animate-glitch {
+    animation: glitch 0.3s ease-in-out infinite alternate;
+  }
+  
+  .animate-terminal {
+    animation: terminalBlink 1s step-end infinite;
+  }
+  
+  .animate-hologram {
+    animation: hologramShimmer 3s ease-in-out infinite;
+  }
+  
+  /* Hover animations */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px -12px hsl(var(--primary) / 0.25);
+  }
+  
+  .hover-glow {
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .hover-glow:hover {
+    box-shadow: 0 0 30px hsl(var(--primary) / 0.5);
+  }
+  
+  .hover-scale {
+    transition: transform 0.3s ease;
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+  
+  .hover-neon {
+    transition: var(--transition-elastic);
+  }
+  
+  .hover-neon:hover {
+    box-shadow: var(--shadow-neon);
+    text-shadow: 0 0 10px hsl(var(--primary));
+  }
+  
+  .hover-cyber {
+    transition: var(--transition-elastic);
+  }
+  
+  .hover-cyber:hover {
+    box-shadow: var(--shadow-cyber);
+    transform: scale(1.03) rotateY(5deg);
+  }
+  
+  .hover-matrix:hover {
+    background: var(--gradient-matrix);
+    color: #000000;
+  }
+  
+  /* Stagger animation delays */
+  .stagger-1 { animation-delay: 0.1s; }
+  .stagger-2 { animation-delay: 0.2s; }
+  .stagger-3 { animation-delay: 0.3s; }
+  .stagger-4 { animation-delay: 0.4s; }
+  .stagger-5 { animation-delay: 0.5s; }
+  .stagger-6 { animation-delay: 0.6s; }
+  .stagger-7 { animation-delay: 0.7s; }
+  .stagger-8 { animation-delay: 0.8s; }
+  .stagger-9 { animation-delay: 0.9s; }
+  .stagger-10 { animation-delay: 1.0s; }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes gradientShift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Developer-focused keyframes */
+@keyframes codeType {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes matrixRain {
+  0% { transform: translateY(-100%); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(100vh); opacity: 0; }
+}
+
+@keyframes neuralPulse {
+  0%, 100% { 
+    background-position: 0% 50%;
+    filter: hue-rotate(0deg);
+  }
+  50% { 
+    background-position: 100% 50%;
+    filter: hue-rotate(180deg);
+  }
+}
+
+@keyframes dataFlow {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100vw); }
+}
+
+@keyframes circuitPulse {
+  0%, 100% { 
+    box-shadow: 0 0 5px hsl(var(--primary)), inset 0 0 5px hsl(var(--primary));
+  }
+  50% { 
+    box-shadow: 0 0 20px hsl(var(--primary)), inset 0 0 20px hsl(var(--primary));
+  }
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-2px, 2px); }
+  40% { transform: translate(-2px, -2px); }
+  60% { transform: translate(2px, 2px); }
+  80% { transform: translate(2px, -2px); }
+  100% { transform: translate(0); }
+}
+
+@keyframes terminalBlink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+@keyframes hologramShimmer {
+  0% { 
+    background-position: -200% center;
+    opacity: 0.7;
+  }
+  100% { 
+    background-position: 200% center;
+    opacity: 1;
+  }
+}
+
+@keyframes particleFloat {
+  0%, 100% { 
+    transform: translateY(0) rotate(0deg); 
+    opacity: 0;
+  }
+  10%, 90% { 
+    opacity: 1;
+  }
+  50% { 
+    transform: translateY(-20px) rotate(180deg);
+  }
+}
